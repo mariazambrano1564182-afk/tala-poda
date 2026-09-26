@@ -1,0 +1,1 @@
+- [Assets y contenido local](asset-transition.md) — las referencias adjuntas deben copiarse al directorio de assets del proyecto; el panel actual guarda cambios en localStorage.

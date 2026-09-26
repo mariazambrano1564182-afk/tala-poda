@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Tala y Podas Profesionales"
+description = "Sitio web comercial para un emprendimiento de tala, poda en altura y recolección de desechos orgánicos, con contacto directo por WhatsApp y panel de administración de contenido."
+version = "1.0.0"
+id = "artifacts/tala-podas-profesionales"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21049
+
+[services.development]
+run = "pnpm --filter @workspace/tala-podas-profesionales run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/tala-podas-profesionales", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/tala-podas-profesionales/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21049"
+BASE_PATH = "/"
