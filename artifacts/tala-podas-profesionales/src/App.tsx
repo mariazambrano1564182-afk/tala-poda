@@ -2,7 +2,7 @@ import { useEffect, useState, type ReactNode } from 'react';
 import { Route, Switch, Link, useLocation, Router as WouterRouter } from 'wouter';
 import {
   ArrowUpRight, Check, ChevronRight, ExternalLink, HardHat, Leaf, Menu, MessageCircle,
-  Phone, Plus, Quote, ShieldCheck, Star,
+  LockKeyhole, Phone, Plus, Quote, ShieldCheck, Star,
   TreePine, X, Wrench, Trash2, Save, ImagePlus
 } from 'lucide-react';
 import alturaImg from '@assets/generated_images/tala-altura.jpg';
@@ -182,7 +182,7 @@ function Contact() {
 }
 
 function Footer() {
-  return <footer className="bg-[#17382b] px-5 py-12 text-white lg:px-8"><div className="mx-auto flex max-w-7xl flex-col gap-10 md:flex-row md:items-end md:justify-between"><div><img src={LOGO} alt="Tala y Podas Profesionales" className="h-14 w-auto max-w-[250px] object-contain object-left" /><p className="mt-5 max-w-xs text-sm leading-relaxed text-white/55">Poda, tala y trabajo en altura con seguridad visible y atención local.</p></div><div className="flex flex-col gap-3 text-sm text-white/70 md:items-end"><a data-testid="link-footer-whatsapp" href={waLink()} target="_blank" rel="noreferrer" className="flex items-center gap-2 font-bold text-[#ffb53f]"><MessageCircle size={17} /> 0414 369 7204</a><span>Atención por WhatsApp · Consulta sin compromiso</span><Link data-testid="link-admin" href="/admin" className="mt-4 text-[10px] uppercase tracking-[.18em] text-white/30 transition-colors hover:text-white/70">Acceso administrativo</Link></div></div><div className="mx-auto mt-12 max-w-7xl border-t border-white/15 pt-5 font-mono text-[10px] uppercase tracking-[.13em] text-white/35">© {new Date().getFullYear()} Tala y Podas Profesionales · Servicio con criterio</div></footer>;
+  return <footer className="bg-[#17382b] px-5 py-12 text-white lg:px-8"><div className="mx-auto flex max-w-7xl flex-col gap-10 md:flex-row md:items-end md:justify-between"><div><img src={LOGO} alt="Tala y Podas Profesionales" className="h-14 w-auto max-w-[250px] object-contain object-left" /><p className="mt-5 max-w-xs text-sm leading-relaxed text-white/55">Poda, tala y trabajo en altura con seguridad visible y atención local.</p></div><div className="flex flex-col gap-3 text-sm text-white/70 md:items-end"><a data-testid="link-footer-whatsapp" href={waLink()} target="_blank" rel="noreferrer" className="flex items-center gap-2 font-bold text-[#ffb53f]"><MessageCircle size={17} /> 0414 369 7204</a><span>Atención por WhatsApp · Consulta sin compromiso</span></div></div><div className="mx-auto mt-12 flex max-w-7xl items-center justify-between border-t border-white/15 pt-5"><span className="font-mono text-[10px] uppercase tracking-[.13em] text-white/35">© {new Date().getFullYear()} Tala y Podas Profesionales · Servicio con criterio</span><Link data-testid="link-admin" href="/admin" aria-label="Panel privado" title="Panel privado" className="rounded-full p-2 text-white/15 transition-colors hover:bg-white/10 hover:text-white/65"><LockKeyhole size={13} strokeWidth={1.7} /></Link></div></footer>;
 }
 
 function PublicPage() {
